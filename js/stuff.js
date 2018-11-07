@@ -66,11 +66,11 @@
       }
       this.gameStarted = true;
       this.muuuu();
-      this.randomMu = setInterval(function() {
-        return self.muuuu({
-          noTrigger: true
-        });
-      }, 5000);
+      // this.randomMu = setInterval(function() {
+      //   return self.muuuu({
+      //     noTrigger: true
+      //   });
+      // }, 5000);
       this.changeButtonState("#startGame");
       this.timerPanel.html(self.timeRemain);
       return this.timingDownFrom(this.timeRemain);
@@ -140,10 +140,10 @@
           self.updateScore(-10);
         }
         mu.removeClass("out").unbind("click");
-        if (!options.noTrigger) {
-          return self.muuuu();
-        }
-      }, 2000);
+        // if (!options.noTrigger) {
+        //   return self.muuuu();
+        // }
+      }, 60000);
       return mu.bind("click", function() {
         mu.removeClass("out").unbind("click");
         if (!options.noTrigger) {
